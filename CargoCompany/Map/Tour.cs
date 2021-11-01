@@ -15,7 +15,6 @@ namespace CargoCompany.Map
         {
             for (Stop stop = Anchor; stop.Next != Anchor; stop = stop.Next)
             {
-                //skip the next one, since you can't swap with that
                 Stop current = stop.Next.Next;
                 while (current != Anchor)
                 {
@@ -42,11 +41,9 @@ namespace CargoCompany.Map
                 if (stop.City == secondCity) secondFrom = stop;
             }
 
-            //the swap part
             var firstTo = firstFrom.Next;
             var secondTo = secondFrom.Next;
 
-            //reverse all of the links between the swaps
             firstTo.CanGetTo()
                    .TakeWhile(stop => stop != secondTo)
                    .Reverse()
