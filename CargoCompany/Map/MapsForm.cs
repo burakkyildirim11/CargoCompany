@@ -124,7 +124,7 @@ namespace CargoCompany.Map
 
         private void MapsForm_Load(object sender, EventArgs e)
         {
-            GMapProviders.GoogleMap.ApiKey = "AIzaSyAweG5zO2CCoQsMfSQOKbEeax480pnqSis";
+            GMapProviders.GoogleMap.ApiKey = "YourApiKey";
 
             map.DragButton = MouseButtons.Left;
             map.MapProvider = GMapProviders.GoogleMap;
